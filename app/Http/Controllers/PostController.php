@@ -38,9 +38,16 @@ class PostController extends Controller
     	$post->post=$request->post;
 
     	$post->save();
+
+    	Session::flash('success', 'post updated');
     	
     	return redirect()->route('view');
 
 
+    }
+    public function delete($id){
+    	Post::findOrFail($id)->delete();
+    	Session::flash('success','post deleted');
+    	return redirect()->back();
     }
 }

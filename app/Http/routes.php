@@ -14,14 +14,17 @@ Route::get('blog', [
 	'uses' => 'PostController@index',
 	'as' => 'blog',
 	]);
+//route for post
 Route::post('create',[
 	'uses' => 'PostController@create',
 	'as'=> 'create'
 	]);
+//route for view
 Route::get('view',[
 	'uses' => 'PostController@view',
 	'as' => 'view',
 	]);
+//route for update
 Route::get('getupdate/{id}',[
 	'uses' => 'PostController@getUpdate',
 	'as' => 'getupdate', 
@@ -29,4 +32,9 @@ Route::get('getupdate/{id}',[
 Route::post('setupdate/{id}',[
 	'uses' => 'PostController@setUpdate',
 	'as' => 'setupdate',
+	]);
+//route for delete
+Route::get('delete/{id}',[
+	'uses' => 'PostController@delete',
+	'as' => 'delete',
 	]);
