@@ -4,6 +4,11 @@
 <div class="container">
 	<div class="col-lg-10">
 		<h1>Simple Blog</h1>
+		@if(Session::has('success'))
+			<div class="alert alert-success">
+  				{{Session::get('success')}}
+			</div>
+		@endif
 	     <form class="form-horizontal col-lg-4" action="{{ route('create')}}" method="POST">
 	     	{{csrf_field()}}
    <div class="form-group">
