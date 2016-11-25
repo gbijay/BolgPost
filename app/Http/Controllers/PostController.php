@@ -23,7 +23,7 @@ class PostController extends Controller
     	
     }
     public function view(){
-    	$posts=Post::all();
+    	$posts=Post::paginate(2);
     	return view('blog.post', compact('posts'));
     }
 }

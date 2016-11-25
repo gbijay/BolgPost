@@ -2,12 +2,24 @@
 
 @section('content')
 @foreach($posts as $post)
-<h1>{{$post->title}}</h1>
-<p>{{$post->author}}</p>
-<p>{{$post->post}}</p>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8">
+
+
+	<h1>{{$post->title}}</h1>
+	<p>by &nbsp;{{$post->author}}</p>
+	<p>{{$post->post}}</p>
+
+		</div>
+	</div>
+</div>
 
 
 @endforeach
+<div style="text-align:center">
+{{$posts->links()}}
+</div>
 
 
 @endsection
