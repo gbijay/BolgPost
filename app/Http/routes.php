@@ -22,3 +22,11 @@ Route::get('view',[
 	'uses' => 'PostController@view',
 	'as' => 'view',
 	]);
+Route::get('getupdate/{id}',[
+	'uses' => 'PostController@getUpdate',
+	'as' => 'getupdate', 
+	]);
+Route::post('setupdate/{id}',[
+	'uses' => 'PostController@setUpdate',
+	'as' => 'setupdate',
+	]);

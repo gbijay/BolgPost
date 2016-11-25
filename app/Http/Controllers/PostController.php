@@ -26,4 +26,21 @@ class PostController extends Controller
     	$posts=Post::paginate(2);
     	return view('blog.post', compact('posts'));
     }
+    public function getUpdate($id){
+    	$post=Post::findOrFail($id);
+    	return view('blog.update',compact('post'));
+
+    }
+    public function setUpdate(Request $request, $id){
+    	$post=Post::find($id);
+    	$post->title=$request->title;
+    	$post->author=$request->author;
+    	$post->post=$request->post;
+
+    	$post->save();
+    	
+    	return redirect()->route('view');
+
+
+    }
 }

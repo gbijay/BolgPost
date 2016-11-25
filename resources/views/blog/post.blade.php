@@ -11,6 +11,8 @@
 	<p>by &nbsp;{{$post->author}}</p>
 	<p>{{$post->post}}</p>
 
+	<a href="{{ route('getupdate',$post->id)}}">Edit</a>
+
 		</div>
 	</div>
 </div>
