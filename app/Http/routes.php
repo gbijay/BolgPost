@@ -18,3 +18,7 @@ Route::post('create',[
 	'uses' => 'PostController@create',
 	'as'=> 'create'
 	]);
+Route::get('view',[
+	'uses' => 'PostController@view',
+	'as' => 'view',
+	]);

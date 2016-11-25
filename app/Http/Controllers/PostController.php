@@ -9,6 +9,7 @@ use App\Post;
 use Session;
 use DB;
 
+
 class PostController extends Controller
 {
     public function index(){
@@ -20,5 +21,9 @@ class PostController extends Controller
     	Session::flash('success','post created');
     	return redirect('blog');
     	
+    }
+    public function view(){
+    	$posts=Post::all();
+    	return view('blog.post', compact('posts'));
     }
 }
