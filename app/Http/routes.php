@@ -14,3 +14,7 @@ Route::get('blog', [
 	'uses' => 'PostController@index',
 	'as' => 'blog',
 	]);
+Route::post('create',[
+	'uses' => 'PostController@create',
+	'as'=> 'create'
+	]);
