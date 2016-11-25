@@ -9,11 +9,11 @@
 	<nav class="navbar navbar-default navbar-static">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Blog</a>
+				<a class="navbar-brand" href="{{ route('view')}}">Blog</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li><a href="#">View</a></li>
-				<li> <a href="#">Create</a></li>
+				<li><a href="{{ route('view')}}">View</a></li>
+				<li> <a href="{{ route('blog')}}">Create</a></li>
 			</ul>
 		</div>
 	</nav>
