@@ -21,7 +21,7 @@
 
     </div>
     @endif
-	     <form class="form-horizontal col-lg-4" action="{{ route('create')}}" method="POST">
+	     <form class="form-horizontal col-lg-10" action="{{ route('create')}}" method="POST">
 	     	{{csrf_field()}}
    <div class="form-group">
      <label for="title" class="col-sm-2 control-label">Title</label>
@@ -38,7 +38,7 @@
    <div class="form-group">
      <label for="post" class="col-sm-2 control-label">Post</label>
      <div class="col-sm-10">
-       <textarea class="form-control" name="post" id="post" placeholder="post" rows="4"></textarea>
+       <textarea class="form-control" name="post" id="post" placeholder="post" rows="20"></textarea>
      </div>
    </div>
     

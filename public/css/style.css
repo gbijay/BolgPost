@@ -1,0 +1,11 @@
+.cssfooter{
+	
+	background-color: #E0E0E0;
+}
+.border{
+	border-style: inset;
+	border-color: rgb(66666);
+	border-radius: 20px;
+	margin: 15px;
+
+}
