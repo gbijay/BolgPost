@@ -16,9 +16,15 @@ class PostController extends Controller
     	return view('blog.view');
     }
     public function create(Request $request){
+        $this->validate($request,[
+            'title'=>'required|max:255',
+            'author'=>'required|max:255',
+            'post'=>'required',
+            ]);
+
     	$post=$request->all();
     	Post::create($post);
-    	Session::flash('success','post created');
+        Session::flash('success','post created');
     	return redirect('blog');
     	
     }
@@ -28,7 +34,7 @@ class PostController extends Controller
     }
     public function getUpdate($id){
     	$post=Post::findOrFail($id);
-    	return view('blog.update',compact('post'));
+    	return view('blog.update',compact('post'));   
 
     }
     public function setUpdate(Request $request, $id){

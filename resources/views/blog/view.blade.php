@@ -4,11 +4,23 @@
 <div class="container">
 	<div class="col-lg-10">
 		<h1>Simple Blog</h1>
+    <!-- for session -->
 		@if(Session::has('success'))
 			<div class="alert alert-success">
   				{{Session::get('success')}}
 			</div>
 		@endif
+    <!-- for validation -->
+    @if(count($errors)>0)
+    <div class="alert alert-danger">
+      <ul>
+        @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+      </ul>
+
+    </div>
+    @endif
 	     <form class="form-horizontal col-lg-4" action="{{ route('create')}}" method="POST">
 	     	{{csrf_field()}}
    <div class="form-group">

@@ -11,4 +11,5 @@ class Post extends Model
     'author',
     'post'
     ];
+
 }
