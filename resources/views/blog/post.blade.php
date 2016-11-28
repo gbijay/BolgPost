@@ -19,8 +19,17 @@
 	<p>{{$post->post}}</p>
 
 	<button type="button" class="btn btn-success"><a href="{{ route('getupdate',$post->id)}}">Edit</a></button>&nbsp;
-	<button type-"button" class="btn btn-danger"><a href="{{ route('delete',$post->id)}}">Delete</a></button>
-
+	<button type-"button" class="btn btn-danger" onClick="return ConfirmDelete();"><a href="{{ route('delete',$post->id)}}">Delete</a></button>
+	<script>
+    function ConfirmDelete()
+    {
+      var x = confirm("Are you sure you want to delete?");
+      if (x)
+          return true;
+      else
+        return false;
+    }
+  </script> 
 
 		</div>
 	</div>

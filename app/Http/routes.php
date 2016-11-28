@@ -38,3 +38,6 @@ Route::get('delete/{id}',[
 	'uses' => 'PostController@delete',
 	'as' => 'delete',
 	]);
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

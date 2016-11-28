@@ -38,7 +38,7 @@
    <div class="form-group">
      <label for="post" class="col-sm-2 control-label">Post</label>
      <div class="col-sm-10">
-       <textarea class="form-control" name="post" id="post" placeholder="post" rows="20"></textarea>
+       <textarea class="form-control" name="post" id="post" placeholder="post" rows="19"></textarea>
      </div>
    </div>
     

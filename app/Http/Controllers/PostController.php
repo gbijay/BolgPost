@@ -29,7 +29,7 @@ class PostController extends Controller
     	
     }
     public function view(){
-    	$posts=Post::orderBy('created_at','desc')->paginate(3);
+    	$posts=Post::orderBy('created_at','desc')->paginate(2);
     	return view('blog.post', compact('posts'));
     }
     public function getUpdate($id){
